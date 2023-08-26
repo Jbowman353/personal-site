@@ -1,0 +1,20 @@
+<div class="full-width header-wrap" [ngClass]="isHomePage ? 'home-page-wrap' : 'header-wrap'">
+    <!-- Logo / Home Link -->
+    <h1 id="site-title" class="center-text cursor-pointer" routerLink="/">JOSH T BOWMAN</h1>
+
+    <div class="nav-menu">
+        <div id="links" class="nav-menu-line">
+            <div *ngFor="let item of menuItems" class="nav-menu-item">
+                <a *ngIf="item.external" href="{{item.link}}" routerLinkActive="active">{{item.label}}</a>
+                <a *ngIf="!item.external" routerLink="{{item.link}}" routerLinkActive="active">{{item.label}}</a>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div id="socials" class="nav-menu-line">
+            <div *ngFor="let social of socials" class="nav-menu-item">
+                <a  href="{{ social.link }}" target="_blank"><i class="pi {{ social.icon }} nav-menu-social"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
