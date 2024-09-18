@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BioPageComponent } from './bio-page.component';
+import { BlogComponent } from './blog.component';
 
-describe('BioPageComponent', () => {
-  let component: BioPageComponent;
-  let fixture: ComponentFixture<BioPageComponent>;
+describe('BlogComponent', () => {
+  let component: BlogComponent;
+  let fixture: ComponentFixture<BlogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BioPageComponent ]
+      imports: [BlogComponent]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(BioPageComponent);
+    fixture = TestBed.createComponent(BlogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
